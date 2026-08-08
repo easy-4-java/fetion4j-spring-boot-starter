@@ -9,8 +9,10 @@ package net.apexes.fetion4j.core;
 import java.io.IOException;
 
 /**
+ * Feedback callback used during Fetion authentication (e.g. captcha challenges).
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface AuthFeedback {
     

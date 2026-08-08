@@ -9,8 +9,10 @@ package net.apexes.fetion4j.core.client;
 import net.apexes.fetion4j.core.Captcha;
 
 /**
+ * Default {@link net.apexes.fetion4j.core.Captcha} implementation.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class CaptchaImpl implements Captcha {
 

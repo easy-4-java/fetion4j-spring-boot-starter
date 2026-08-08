@@ -12,9 +12,10 @@ import net.apexes.fetion4j.core.util.XmlElement;
 import net.apexes.fetion4j.core.util.XmlElementHelper;
 
 /**
- * 用于验证指定的手机号码是否是中国移动手机号码
- * 
- * @author HeDYn <hedyn@foxmail.com>
+ * Validates China Mobile phone numbers against the Fetion mobile-number distribution table.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class CmccMobileValidator {
     

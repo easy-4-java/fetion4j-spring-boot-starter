@@ -14,8 +14,10 @@ import net.apexes.fetion4j.core.SystemConfig;
 import net.apexes.fetion4j.core.UserInfo;
 
 /**
+ * Context object exposing shared state and collaborators to the Fetion client.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface FetionContext {
     
