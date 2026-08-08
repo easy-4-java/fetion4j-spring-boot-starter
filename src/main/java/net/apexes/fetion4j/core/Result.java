@@ -7,8 +7,10 @@
 package net.apexes.fetion4j.core;
 
 /**
+ * Generic result envelope for Fetion client operations.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Result {
     

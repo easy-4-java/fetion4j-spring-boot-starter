@@ -16,8 +16,10 @@ import net.apexes.fetion4j.core.sipc.ResponseMessage;
 import net.apexes.fetion4j.core.sipc.SipcMessage;
 
 /**
+ * Dispatches incoming Fetion SIPC messages to the appropriate handler.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Dispatcher {
 

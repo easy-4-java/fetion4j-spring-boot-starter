@@ -12,8 +12,10 @@ import net.apexes.fetion4j.core.client.FetionContext;
 import net.apexes.fetion4j.core.user.Buddy;
 
 /**
+ * Default {@link FetionConsole} implementation backed by a {@link net.apexes.fetion4j.core.client.Controller}.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class FetionConsoleImpl implements FetionConsole {
     

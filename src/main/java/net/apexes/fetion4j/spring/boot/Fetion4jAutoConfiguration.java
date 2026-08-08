@@ -6,19 +6,37 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
+/**
+ * Spring Boot auto-configuration for the Fetion (China Mobile IM) integration.
+ * <p>
+ * Activates only when {@code spring.dozer.enabled} is set to {@code true}, and
+ * binds {@link Fetion4jProperties} to the {@code spring.dozer.*} namespace.
+ * Exposes a shared {@link ResourcePatternResolver} for resolving classpath
+ * resources used by the integration.
+ * </p>
+ *
+ * <h3>Configuration</h3>
+ * <ul>
+ *   <li>{@code spring.dozer.enabled} — opt-in switch (default {@code false})</li>
+ *   <li>{@code spring.dozer.mapping-files} — resource pattern for mapping files, e.g. {@code classpath*:/*.dozer.xml}</li>
+ * </ul>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
+ */
 @Configuration
 @ConditionalOnProperty(prefix = Fetion4jProperties.PREFIX, value = "enabled", havingValue = "true")
 @EnableConfigurationProperties({ Fetion4jProperties.class })
 public class Fetion4jAutoConfiguration {
 
-	//spring 资源路径匹配解析器
-	//“classpath”： 用于加载类路径（包括jar包）中的一个且仅一个资源；对于多个匹配的也只返回一个，所以如果需要多个匹配的请考虑“classpath*:”前缀
-	//“classpath*”： 用于加载类路径（包括jar包）中的所有匹配的资源。带通配符的classpath使用“ClassLoader”的“Enumeration<URL> getResources(String name)”
-	//方法来查找通配符之前的资源，然后通过模式匹配来获取匹配的资源。
+	// Spring resource pattern resolver.
+	// "classpath"   : loads a single resource from the classpath (including jars); returns only the first match even if multiple exist, so use "classpath*:" when multiple matches are required.
+	// "classpath*"  : loads ALL matching resources from the classpath (including jars). Wildcard classpath uses the ClassLoader's Enumeration<URL> getResources(String name)
+	//                 method to find resources before the wildcard prefix, then applies pattern matching to resolve the matching resources.
 	protected static ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 	/*
 	@Bean
 	@ConditionalOnMissingBean
-	
+
 */
 }

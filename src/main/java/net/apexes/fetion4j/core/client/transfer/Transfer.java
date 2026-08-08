@@ -12,8 +12,10 @@ import java.text.ParseException;
 import net.apexes.fetion4j.core.sipc.SipcMessage;
 
 /**
+ * Contract for sending and receiving Fetion SIPC messages over the wire.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface Transfer {
     

@@ -24,8 +24,10 @@ import net.apexes.fetion4j.core.util.ConvertHelper;
 import net.apexes.fetion4j.core.util.DigestHelper;
 
 /**
- *  验证信息生成类
- *  参照了reflector反编译的飞信源代码以及用HaozesFx测试结果^_^!我折腾了一个下午才搞出来。。
+ * Generates Fetion v4 authentication requests.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class AuthGeneratorV4 {
 

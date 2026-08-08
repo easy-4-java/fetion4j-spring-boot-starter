@@ -7,8 +7,10 @@
 package net.apexes.fetion4j.core;
 
 /**
+ * Represents a captcha challenge returned by the Fetion SSI service.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface Captcha {
     
