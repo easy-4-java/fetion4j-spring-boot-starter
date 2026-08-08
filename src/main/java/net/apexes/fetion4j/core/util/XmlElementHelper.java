@@ -14,8 +14,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
+ * Helper methods for navigating {@link XmlElement} trees.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class XmlElementHelper {
 
