@@ -16,8 +16,10 @@ import net.apexes.fetion4j.core.util.XmlElement;
 import net.apexes.fetion4j.core.util.XmlElementHelper;
 
 /**
+ * Parsed Fetion system configuration obtained from the navigation service.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class SystemConfig {
     

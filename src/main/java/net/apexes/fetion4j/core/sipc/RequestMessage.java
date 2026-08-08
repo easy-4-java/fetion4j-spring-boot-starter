@@ -8,8 +8,10 @@
 package net.apexes.fetion4j.core.sipc;
 
 /**
+ * A Fetion SIPC request message.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class RequestMessage extends SipcMessage {
     

@@ -20,9 +20,10 @@ import net.apexes.fetion4j.core.user.Buddy;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
- * 
+ * Dialogue representing a one-to-one chat session.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class ChatDialogue extends Dialogue {
 

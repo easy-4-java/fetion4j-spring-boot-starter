@@ -13,9 +13,10 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
 /**
- * 加密算法工具
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Digest (hash) helpers used for Fetion authentication.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class DigestHelper {
 

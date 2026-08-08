@@ -13,8 +13,10 @@ import net.apexes.fetion4j.core.client.Controller;
 import net.apexes.fetion4j.core.client.FetionContext;
 
 /**
+ * Represents a secondary Fetion activity nested under a parent activity.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class SubActivity extends Activity {
     
