@@ -7,9 +7,10 @@
 package net.apexes.fetion4j.core;
 
 /**
- * 飞信异常，是所有飞信异常的基类
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Root exception for all errors raised by the Fetion4j client.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class FetionException extends Exception {
     private static final long serialVersionUID = 1L;

@@ -9,8 +9,10 @@ package net.apexes.fetion4j.core;
 import net.apexes.fetion4j.core.user.Buddy;
 
 /**
+ * Interactive console contract for sending and receiving Fetion messages after login.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface FetionConsole {
     

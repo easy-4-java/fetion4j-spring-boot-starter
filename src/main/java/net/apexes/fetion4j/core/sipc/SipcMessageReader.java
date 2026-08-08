@@ -12,8 +12,10 @@ import java.io.InputStream;
 import java.text.ParseException;
 
 /**
+ * Parses Fetion SIPC messages from an input stream.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class SipcMessageReader {
 

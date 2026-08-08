@@ -43,62 +43,10 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * XmlElement is a representation of an XML object. The object is able to parse
- * XML code.
- * <P><DL>
- * <DT><B>Parsing XML Data</B></DT>
- * <DD>
- * You can parse XML data using the following code:
- * <UL><CODE>
- * XmlElement xml = new XmlElement();<BR>
- * FileReader reader = new FileReader("filename.xml");<BR>
- * xml.parseFromReader(reader);
- * </CODE></UL></DD></DL>
- * <DL><DT><B>Retrieving Attributes</B></DT>
- * <DD>
- * You can enumerate the attributes of an element using the method
- * {@link #enumerateAttributeNames() enumerateAttributeNames}.
- * The attribute values can be retrieved using the method
- * {@link #getStringAttribute(java.lang.String) getStringAttribute}.
- * The following example shows how to list the attributes of an element:
- * <UL><CODE>
- * XmlElement element = ...;<BR>
- * Enumeration enum = element.getAttributeNames();<BR>
- * while (enum.hasMoreElements()) {<BR>
- * &nbsp;&nbsp;&nbsp;&nbsp;String key = (String) enum.nextElement();<BR>
- * &nbsp;&nbsp;&nbsp;&nbsp;String value = element.getStringAttribute(key);<BR>
- * &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(key + " = " + value);<BR>
- * }
- * </CODE></UL></DD></DL>
- * <DL><DT><B>Retrieving Child Elements</B></DT>
- * <DD>
- * You can enumerate the children of an element using
- * {@link #enumerateChildren() enumerateChildren}.
- * The number of child elements can be retrieved using
- * {@link #countChildren() countChildren}.
- * </DD></DL>
- * <DL><DT><B>Elements Containing Character Data</B></DT>
- * <DD>
- * If an elements contains character data, like in the following example:
- * <UL><CODE>
- * &lt;title&gt;The Title&lt;/title&gt;
- * </CODE></UL>
- * you can retrieve that data using the method
- * {@link #getContent() getContent}.
- * </DD></DL>
- * <DL><DT><B>Subclassing XmlElement</B></DT>
- * <DD>
- * When subclassing XmlElement, you need to override the method
- * {@link #createAnotherElement() createAnotherElement}
- * which has to return a new copy of the receiver.
- * </DD></DL>
- * <P>
+ * Lightweight DOM-like XML element used for parsing Fetion responses.
  *
- * @see org.appframe.commons.util.XmlParseException
- *
- * @author Marc De Scheemaecker
- *         &lt;<A href="mailto:cyberelf@mac.com">cyberelf@mac.com</A>&gt;
- * @version $Name: RELEASE_2_2_1 $, $Revision: 1.5 $
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class XmlElement implements java.io.Serializable {
 

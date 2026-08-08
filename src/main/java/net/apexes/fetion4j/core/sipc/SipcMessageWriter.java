@@ -11,8 +11,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
+ * Serialises Fetion SIPC messages to an output stream.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class SipcMessageWriter {
     
