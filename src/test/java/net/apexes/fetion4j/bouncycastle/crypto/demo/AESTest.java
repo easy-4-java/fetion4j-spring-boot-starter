@@ -19,7 +19,7 @@ import net.apexes.fetion4j.bouncycastle.crypto.paddings.PaddedBufferedBlockCiphe
 import net.apexes.fetion4j.bouncycastle.crypto.params.KeyParameter;
 import net.apexes.fetion4j.bouncycastle.crypto.params.ParametersWithIV;
 //import org.bouncycastle.util.encoders.Hex;
-import sun.misc.BASE64Decoder;
+// NOTE: sun.misc.BASE64Decoder was removed in JDK 9+; replaced by java.util.Base64.
 
 /**
  *
@@ -56,7 +56,7 @@ public class AESTest {
 
     private static void jec() throws Exception {
         //*
-        byte[] targetBytes = new BASE64Decoder().decodeBuffer(target);
+        byte[] targetBytes = java.util.Base64.getDecoder().decode(target);
         byte[] keyBytes = hexString2ByteNoSpace(key);
         byte[] ivBytes = hexString2ByteNoSpace(IV);
 
