@@ -11,8 +11,10 @@ import net.apexes.fetion4j.core.user.User;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Listener for asynchronous Fetion server notifications.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface NotifyListener {
     

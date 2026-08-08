@@ -23,9 +23,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.StringTokenizer;
 
 /**
- * 转换类
+ * Conversion helpers (hex strings, byte arrays, etc.).
  *
- * @author solosky <solosky772@qq.com> 
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class ConvertHelper {
 

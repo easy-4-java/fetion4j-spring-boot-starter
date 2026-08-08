@@ -28,16 +28,10 @@
 package net.apexes.fetion4j.core.util;
 
 /**
- * An XmlParseException is thrown when an error occures while parsing an XML
- * string.
- * <P>
- * $Revision: 1.5 $<BR>
- * $Date: 2002/03/24 10:27:59 $<P>
+ * Exception raised when parsing a Fetion XML payload fails.
  *
- * @see org.appframe.commons.util.XMLElement
- *
- * @author Marc De Scheemaecker
- * @version $Name: RELEASE_2_2_1 $, $Revision: 1.5 $
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class XmlParseException extends RuntimeException {
     private static final long serialVersionUID = 1L;

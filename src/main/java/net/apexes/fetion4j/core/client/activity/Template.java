@@ -7,8 +7,10 @@
 package net.apexes.fetion4j.core.client.activity;
 
 /**
+ * SIPC protocol message templates used by the Fetion client.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface Template {
     

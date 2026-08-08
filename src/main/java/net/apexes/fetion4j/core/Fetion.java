@@ -30,8 +30,10 @@ import net.apexes.fetion4j.core.user.Presence;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Entry point of the Fetion4j client; logs in to Fetion and exposes a {@link FetionConsole}.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Fetion implements FetionContext {
 

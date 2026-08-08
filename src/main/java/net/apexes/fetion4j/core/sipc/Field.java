@@ -8,10 +8,10 @@
 package net.apexes.fetion4j.core.sipc;
 
 /**
- * 消息头域。格式类似：
- * <div>Q: 1 R</div>
- * 
- * @author HeDYn <hedyn@foxmail.com>
+ * Represents a header field of a Fetion SIPC message.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 class Field {
     
