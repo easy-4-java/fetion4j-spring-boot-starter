@@ -13,8 +13,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Represents a Fetion contact.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class Contact implements java.io.Serializable {
     

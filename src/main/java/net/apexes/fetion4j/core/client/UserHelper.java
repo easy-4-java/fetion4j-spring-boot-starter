@@ -13,8 +13,10 @@ import net.apexes.fetion4j.core.util.StringHelper;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Helper methods for resolving Fetion user information.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class UserHelper {
     

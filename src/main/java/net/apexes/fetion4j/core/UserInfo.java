@@ -21,8 +21,10 @@ import net.apexes.fetion4j.core.util.XmlElement;
 import net.apexes.fetion4j.core.util.XmlElementHelper;
 
 /**
+ * Cached Fetion user information (personal profile, contacts, etc.).
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class UserInfo {
 

@@ -9,8 +9,10 @@ package net.apexes.fetion4j.core;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Strategy for reading and persisting Fetion system configuration and user data.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface Provider {
     
