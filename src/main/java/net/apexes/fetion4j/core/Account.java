@@ -12,9 +12,10 @@ import net.apexes.fetion4j.core.util.ConvertHelper;
 import net.apexes.fetion4j.core.util.DigestHelper;
 
 /**
- * 飞信账户。
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Fetion account credentials and session state (URI, user id, mobile number, AES keys).
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Account {
    

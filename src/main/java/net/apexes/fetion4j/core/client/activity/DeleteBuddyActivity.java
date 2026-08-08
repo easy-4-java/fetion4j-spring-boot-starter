@@ -19,8 +19,10 @@ import net.apexes.fetion4j.core.user.Contact;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Activity handling the removal of an existing Fetion buddy.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class DeleteBuddyActivity extends Activity {
     

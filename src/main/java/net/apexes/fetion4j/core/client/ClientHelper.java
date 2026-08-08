@@ -20,8 +20,10 @@ import net.apexes.fetion4j.core.util.Base64;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Static helper methods used across the Fetion client implementation.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class ClientHelper {
     

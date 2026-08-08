@@ -23,9 +23,10 @@ import net.apexes.fetion4j.core.sipc.SipcMessage;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Dialogue representing the main Fetion session.
  *
- *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class MainDialogue extends Dialogue {
 
