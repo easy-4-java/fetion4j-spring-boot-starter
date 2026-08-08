@@ -20,10 +20,10 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 /**
- * 字符串工具类
- * 
- * @author solosky <solosky772@qq.com>
+ * Miscellaneous string utilities used by the Fetion client.
  *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class StringHelper {
 

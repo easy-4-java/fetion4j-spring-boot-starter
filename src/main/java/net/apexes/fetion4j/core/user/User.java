@@ -7,9 +7,10 @@
 package net.apexes.fetion4j.core.user;
 
 /**
- * 飞信用户。
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Base type for Fetion user entities.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class User implements java.io.Serializable {
     

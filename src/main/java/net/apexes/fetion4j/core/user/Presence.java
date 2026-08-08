@@ -7,9 +7,10 @@
 package net.apexes.fetion4j.core.user;
 
 /**
- * 状态
+ * Enumeration of Fetion presence states.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public enum Presence {
 

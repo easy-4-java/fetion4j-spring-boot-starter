@@ -22,17 +22,10 @@ package net.apexes.fetion4j.core.util;
 import java.security.InvalidParameterException;
 
 /**
- * Provides Base64 encoding and decoding as defined by RFC 2045.
- * 
- * <p>This class implements section <cite>6.8. Base64 Content-Transfer-Encoding</cite> 
- * from RFC 2045 <cite>Multipurpose Internet Mail Extensions (MIME) Part One: 
- * Format of Internet Message Bodies</cite> by Freed and Borenstein.</p> 
+ * Base64 helper used by the Fetion client.
  *
- * @see <a href="http://www.ietf.org/rfc/rfc2045.txt">RFC 2045</a>
- * 
- *  This class was 
- * @author Apache Software Foundation commons codec (http://commons.apache.org/codec/)
- * @author <a href="http://mina.apache.org">Apache MINA Project</a>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Base64 {
 

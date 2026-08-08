@@ -7,8 +7,10 @@
 package net.apexes.fetion4j.core.sipc;
 
 /**
+ * Fetion SIPC protocol constants and status codes.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public interface Sipc {
     

@@ -35,9 +35,10 @@ import net.apexes.fetion4j.core.user.User;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
- * 负责控制SIPC信令的传输和接收。
+ * Drives the Fetion client lifecycle and dispatches notifications to listeners.
  *
- * @author HeDYn<hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public final class Controller {
 

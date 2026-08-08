@@ -7,9 +7,10 @@
 package net.apexes.fetion4j.core.user;
 
 /**
- * 好友关系
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Describes the relationship between the logged in user and a buddy.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public enum Relation {
 
