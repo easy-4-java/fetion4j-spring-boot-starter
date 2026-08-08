@@ -7,9 +7,10 @@
 package net.apexes.fetion4j.core.user;
 
 /**
- * 好友。
- * 
- * @author HeDYn<hedyn@foxmail.com>
+ * Represents a Fetion buddy entry.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class Buddy extends Personal {
     

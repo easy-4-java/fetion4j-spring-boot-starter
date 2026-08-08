@@ -9,8 +9,10 @@ package net.apexes.fetion4j.core.client;
 import net.apexes.fetion4j.core.sipc.SipcMessage;
 
 /**
+ * Represents a Fetion conversation (chat) session.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public abstract class Dialogue extends Activity {
     

@@ -21,8 +21,10 @@ import net.apexes.fetion4j.core.user.Relation;
 import net.apexes.fetion4j.core.util.XmlElement;
 
 /**
+ * Activity handling the addition of a new Fetion buddy.
  *
- * @author HeDYn <hedyn@foxmail.com>
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
 public class AddBuddyActivity extends Activity {
     
