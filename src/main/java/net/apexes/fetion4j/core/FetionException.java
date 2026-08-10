@@ -9,7 +9,7 @@ package net.apexes.fetion4j.core;
 /**
  * Root exception for all errors raised by the Fetion4j client.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class FetionException extends Exception {

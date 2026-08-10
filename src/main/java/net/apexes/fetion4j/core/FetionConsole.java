@@ -11,7 +11,7 @@ import net.apexes.fetion4j.core.user.Buddy;
 /**
  * Interactive console contract for sending and receiving Fetion messages after login.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public interface FetionConsole {
