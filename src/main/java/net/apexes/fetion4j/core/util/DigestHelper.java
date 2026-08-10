@@ -15,7 +15,7 @@ import javax.crypto.SecretKey;
 /**
  * Digest (hash) helpers used for Fetion authentication.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public final class DigestHelper {

@@ -9,7 +9,7 @@ package net.apexes.fetion4j.core.client.transfer;
 /**
  * Exception raised on transfer-level (network) errors.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class TransferException extends Exception {
