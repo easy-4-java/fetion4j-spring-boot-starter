@@ -5,7 +5,7 @@ import net.apexes.fetion4j.core.sipc.SipcMessage;
 /**
  * Handler for logging Fetion protocol messages and client events.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public interface LogHandler {
