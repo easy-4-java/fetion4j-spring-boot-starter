@@ -21,7 +21,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  *   <li>{@code spring.dozer.mapping-files} — resource pattern for mapping files, e.g. {@code classpath*:/*.dozer.xml}</li>
  * </ul>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Represents a Fetion contact.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public final class Contact implements java.io.Serializable {

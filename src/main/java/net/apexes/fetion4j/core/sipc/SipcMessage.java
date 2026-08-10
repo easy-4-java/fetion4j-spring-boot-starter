@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Base type for Fetion SIPC request and response messages.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public abstract class SipcMessage {

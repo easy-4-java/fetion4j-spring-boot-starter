@@ -23,7 +23,7 @@ import net.apexes.fetion4j.core.util.XmlElement;
 /**
  * Activity handling the addition of a new Fetion buddy.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class AddBuddyActivity extends Activity {

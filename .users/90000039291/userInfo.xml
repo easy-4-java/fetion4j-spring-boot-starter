@@ -1,0 +1,12 @@
+<user-info>
+    <personal mobileNo="0" version="v" userId="123" uri="sip:123@fetion.com.cn;p=1" name="alice"/>
+    <contact-list version="c">
+        <buddy-groups>
+            <buddy-group id="1" name="g"/>
+        </buddy-groups>
+        <buddys>
+            <buddy relation="1" mobileNo="0" userId="456" uri="sip:456@fetion.com.cn;p=1" name="bob"/>
+        </buddys>
+        <blacklist/>
+    </contact-list>
+</user-info>

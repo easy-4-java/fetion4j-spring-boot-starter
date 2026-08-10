@@ -37,7 +37,7 @@ import net.apexes.fetion4j.core.util.XmlElement;
 /**
  * Drives the Fetion client lifecycle and dispatches notifications to listeners.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public final class Controller {

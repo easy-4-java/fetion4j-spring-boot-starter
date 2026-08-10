@@ -9,7 +9,7 @@ package net.apexes.fetion4j.core;
 /**
  * Contract for objects able to provide Fetion authentication support.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public interface AuthSupportable {
