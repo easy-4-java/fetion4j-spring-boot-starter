@@ -18,7 +18,7 @@ import net.apexes.fetion4j.core.sipc.Sipc;
 /**
  * Represents an ongoing Fetion client activity (e.g. adding a buddy, chatting).
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public abstract class Activity {
