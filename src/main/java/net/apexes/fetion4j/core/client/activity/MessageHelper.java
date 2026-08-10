@@ -20,7 +20,7 @@ import net.apexes.fetion4j.core.user.BuddyGroup;
 /**
  * Helper for building and parsing Fetion chat messages used by the activity layer.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 class MessageHelper {

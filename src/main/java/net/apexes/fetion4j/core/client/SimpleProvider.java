@@ -26,7 +26,7 @@ import net.apexes.fetion4j.core.util.XmlElementHelper;
 /**
  * Simple in-memory {@link Provider} implementation.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class SimpleProvider implements Provider, NotifyListener {
