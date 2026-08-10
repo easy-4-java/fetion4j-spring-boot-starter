@@ -25,7 +25,7 @@ import net.apexes.fetion4j.core.util.XmlElement;
 /**
  * Dialogue representing the main Fetion session.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class MainDialogue extends Dialogue {

@@ -30,7 +30,7 @@ package net.apexes.fetion4j.core.util;
 /**
  * Exception raised when parsing a Fetion XML payload fails.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class XmlParseException extends RuntimeException {
