@@ -11,7 +11,7 @@ import net.apexes.fetion4j.core.sipc.SipcMessage;
 /**
  * Represents a Fetion conversation (chat) session.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public abstract class Dialogue extends Activity {

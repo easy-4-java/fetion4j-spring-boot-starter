@@ -19,7 +19,7 @@ import net.apexes.fetion4j.core.sipc.SipcMessageWriter;
 /**
  * TCP based implementation of a Fetion message transfer.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class TcpTransfer implements Transfer {
