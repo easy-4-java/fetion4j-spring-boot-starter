@@ -23,20 +23,31 @@ public class BuddyGroup implements java.io.Serializable {
         this.name = name;
     }
 
+    /** @return return the id. */
     public int getId() {
         return id;
     }
 
+    /** @return return the name. */
     public String getName() {
         return name;
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return name;
     }
 
     @Override
+    /**
+     * <p>Equals.</p>
+     * @param obj
+     * @return the result
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -52,6 +63,10 @@ public class BuddyGroup implements java.io.Serializable {
     }
 
     @Override
+    /**
+     * <p>Hash code.</p>
+     * @return the result
+     */
     public int hashCode() {
         int hash = 5;
         hash = 29 * hash + this.id;

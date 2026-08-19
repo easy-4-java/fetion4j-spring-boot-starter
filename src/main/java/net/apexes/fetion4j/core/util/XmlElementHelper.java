@@ -114,6 +114,13 @@ public class XmlElementHelper {
         }
     }
 
+    /**
+     * <p>Write.</p>
+     * @param xml
+     * @param xmlFile
+     * @param charsetName
+     * @return the result
+     */
     public static void write(XmlElement xml, File xmlFile, String charsetName) throws IOException {
         OutputStreamWriter writer = null;
         try {
@@ -133,6 +140,11 @@ public class XmlElementHelper {
     }
 
     /*
+    /**
+     * <p>Main.</p>
+     * @param args
+     * @return the result
+     */
     public static void main(String[] args) throws Exception {
         XmlElement xml = open("systemconfig.xml", "UTF-8");
         System.out.println(getNodeContent(xml, "/config/servers/get-pic-code"));

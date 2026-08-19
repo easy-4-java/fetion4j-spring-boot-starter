@@ -49,12 +49,19 @@ public class MainDialogue extends Dialogue {
     }
 
     @Override
+    /**
+     * <p>Receive.</p>
+     * @param message
+     */
     public void receive(SipcMessage message) {
         if (Sipc.METHOD_BN.equals(message.getMethod())) {
             parseBN(message);
         }
     }
 
+    /**
+     * <p>Close.</p>
+     */
     public void close() {
         terminateKeepAlive();
     }
@@ -124,6 +131,9 @@ public class MainDialogue extends Dialogue {
      */
     private void launchKeepAlive() {
         TimerTask task = new TimerTask() {
+            /**
+             * <p>Run.</p>
+             */
             public void run() {
                 try {
                     submit(MessageHelper.createKeepAliveRequest());
@@ -146,6 +156,10 @@ public class MainDialogue extends Dialogue {
         }
     }
 
+    /**
+     * <p>Parse b n.</p>
+     * @param message
+     */
     private void parseBN(SipcMessage message) {
         String nValue = message.getFieldValue(Sipc.FIELD_N);
         if ("PresenceV4".equals(nValue)) {

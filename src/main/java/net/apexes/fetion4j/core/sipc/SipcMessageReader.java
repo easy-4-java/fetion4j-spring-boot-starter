@@ -25,10 +25,17 @@ public class SipcMessageReader {
         this.in = new DataInputStream(in);
     }
 
+    /**
+     * <p>Close.</p>
+     */
     public void close() throws IOException {
         in.close();
     }
 
+    /**
+     * <p>Read.</p>
+     * @return the result
+     */
     public SipcMessage read() throws IOException, ParseException {
         SipcMessage message = null;
         String headline = in.readLine();
@@ -42,6 +49,11 @@ public class SipcMessageReader {
         return message;
     }
 
+    /**
+     * <p>Parse response message.</p>
+     * @param headline
+     * @return the result
+     */
     private ResponseMessage parseResponseMessage(String headline) 
             throws IOException, ParseException {
         String[] strArr = headline.split(" ");
@@ -57,6 +69,11 @@ public class SipcMessageReader {
         return message;
     }
     
+    /**
+     * <p>Parse request message.</p>
+     * @param headline
+     * @return the result
+     */
     private RequestMessage parseRequestMessage(String headline) 
             throws IOException, ParseException {
         String[] strArr = headline.split(" ");
@@ -68,6 +85,10 @@ public class SipcMessageReader {
         return message;
     }
     
+    /**
+     * <p>Complete.</p>
+     * @param message
+     */
     private void complete(SipcMessage message) throws IOException, ParseException {
         int bodyLen = 0;
         String lineStr;
@@ -123,6 +144,11 @@ public class SipcMessageReader {
     }
     
     /*
+    /**
+     * <p>Main.</p>
+     * @param args
+     * @return the result
+     */
     public static void main(String[] args) throws Exception {
         java.io.FileInputStream in = new java.io.FileInputStream("test.txt");
         SipcMessageReader reader = new SipcMessageReader(in);

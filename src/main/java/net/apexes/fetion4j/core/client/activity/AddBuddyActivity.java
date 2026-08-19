@@ -105,6 +105,10 @@ public class AddBuddyActivity extends Activity {
         return reply;
     }
     
+    /**
+     * <p>Added buddy.</p>
+     * @param body
+     */
     private void addedBuddy(String body) {
         //<results><contacts version="407799076"><buddies>
         //<buddy user-id="123456789" status-code="200" error-reason="NO REASON"

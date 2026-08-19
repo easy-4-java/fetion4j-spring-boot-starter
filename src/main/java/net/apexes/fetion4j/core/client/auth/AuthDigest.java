@@ -32,26 +32,35 @@ public class AuthDigest {
         this.signature = signature;
     }
 
+    /** @return return the algorithm. */
     public String getAlgorithm() {
         return algorithm;
     }
 
+    /** @return return the key. */
     public String getKey() {
         return key;
     }
 
+    /** @return return the nonce. */
     public String getNonce() {
         return nonce;
     }
 
+    /** @return return the signature. */
     public String getSignature() {
         return signature;
     }
 
+    /** @return return the response. */
     public String getResponse() {
         return response;
     }
 
+    /**
+     * <p>Generate response.</p>
+     * @param account
+     */
     public void generateResponse(Account account) {
         AuthGeneratorV4 auth = new AuthGeneratorV4();
         String passHex = PasswordEncrypterV4.encryptV4(account.getUserId(), account.getPassword());
@@ -60,6 +69,10 @@ public class AuthDigest {
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         if (response == null) {
             return "Digest "

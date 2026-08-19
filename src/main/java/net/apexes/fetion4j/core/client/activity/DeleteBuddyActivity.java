@@ -30,10 +30,21 @@ public class DeleteBuddyActivity extends Activity {
         super(context, controller, callId);
     }
     
+    /**
+     * <p>Delete buddy.</p>
+     * @param buddy
+     * @return the result
+     */
     public Result deleteBuddy(Buddy buddy) throws FetionException {
         return deleteBuddy(buddy, true);
     }
     
+    /**
+     * <p>Delete buddy.</p>
+     * @param buddy
+     * @param deleteBoth
+     * @return the result
+     */
     public Result deleteBuddy(Buddy buddy, boolean deleteBoth) throws FetionException {
         Result reply;
         RequestMessage request = MessageHelper.createDeleteBuddyRequest(buddy, deleteBoth);
@@ -48,6 +59,10 @@ public class DeleteBuddyActivity extends Activity {
         return reply;
     }
     
+    /**
+     * <p>Deleted buddy.</p>
+     * @param body
+     */
     private void deletedBuddy(String body) {
         //<results><contacts version="407799031"><buddies>
         //<buddy user-id="463991346" delete-both="1" />

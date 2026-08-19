@@ -46,6 +46,10 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Read system config.</p>
+     * @return the result
+     */
     public XmlElement readSystemConfig() {
         XmlElement xml = null;
         try {
@@ -56,6 +60,10 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Read user info.</p>
+     * @return the result
+     */
     public UserInfo readUserInfo() {
         UserInfo userInfo = null;
         try {
@@ -101,10 +109,18 @@ public class SimpleProvider implements Provider, NotifyListener {
         return userInfo;
     }
     
+    /**
+     * <p>Write system config.</p>
+     * @param xml
+     */
     public void writeSystemConfig(XmlElement xml) throws IOException {
         XmlElementHelper.write(xml, systemConfigFile, "UTF-8");
     }
     
+    /**
+     * <p>Write user info.</p>
+     * @param userInfo
+     */
     public void writeUserInfo(UserInfo userInfo) throws IOException {
         XmlElement xml = new XmlElement();
         xml.setName("user-info");
@@ -162,11 +178,20 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Transfe error.</p>
+     * @param message
+     * @param exception
+     */
     public void transfeError(String message, Exception exception) {
         context.getLogHandler().error(SimpleProvider.class, message, exception);
     }
     
     @Override
+    /**
+     * <p>Changed system config.</p>
+     * @param systemConfig
+     */
     public void changedSystemConfig(XmlElement systemConfig) {
         try {
             writeSystemConfig(systemConfig);
@@ -176,10 +201,19 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Created account.</p>
+     * @param account
+     */
     public void createdAccount(Account account) {
     }
 
     @Override
+    /**
+     * <p>Login successed.</p>
+     * @param console
+     * @param userInfo
+     */
     public void loginSuccessed(FetionConsole console, UserInfo userInfo) {
         try {
             writeUserInfo(userInfo);
@@ -189,6 +223,9 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Logout successed.</p>
+     */
     public void logoutSuccessed() {
         try {
             writeUserInfo(context.getUserInfo());
@@ -198,26 +235,50 @@ public class SimpleProvider implements Provider, NotifyListener {
     }
 
     @Override
+    /**
+     * <p>Changed user.</p>
+     * @param user
+     */
     public void changedUser(User user) {
         context.getLogHandler().debug(SimpleProvider.class, "更新联系人：" + user);
     }
 
     @Override
+    /**
+     * <p>Changed buddy.</p>
+     * @param buddy
+     * @param contactVersion
+     */
     public void changedBuddy(Buddy buddy, String contactVersion) {
         context.getLogHandler().debug(SimpleProvider.class, "[" + contactVersion + "]更新好友：" + buddy);
     }
 
     @Override
+    /**
+     * <p>Added buddy.</p>
+     * @param buddy
+     * @param contactVersion
+     */
     public void addedBuddy(Buddy buddy, String contactVersion) {
         context.getLogHandler().debug(SimpleProvider.class, "[" + contactVersion + "]添加好友：" + buddy);
     }
 
     @Override
+    /**
+     * <p>Deleted buddy.</p>
+     * @param buddy
+     * @param contactVersion
+     */
     public void deletedBuddy(Buddy buddy, String contactVersion) {
         context.getLogHandler().debug(SimpleProvider.class, "[" + contactVersion + "]删除好友：" + buddy);
     }
 
     @Override
+    /**
+     * <p>Sms count changed.</p>
+     * @param dayCount
+     * @param monthCount
+     */
     public void smsCountChanged(int dayCount, int monthCount) {
         context.getLogHandler().debug(SimpleProvider.class, "dayCount=" + dayCount + ", monthCount=" + monthCount);
     }

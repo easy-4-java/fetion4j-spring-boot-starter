@@ -29,27 +29,36 @@ class Field {
         setValue(value);
     }
 
+    /** @return return the name. */
     public String getName() {
         return name;
     }
 
+    /** @param name set the name. */
     public void setName(String name) {
         this.name = name;
     }
 
+    /** @return return the value. */
     public String getValue() {
         return value;
     }
 
+    /** @param value set the value. */
     public void setValue(String value) {
         this.value = value;
     }
 
+    /** @return return the text. */
     public String getText() {
         return getName() + ": " + getValue();
     }
 
     @Override
+    /**
+     * <p>Hash code.</p>
+     * @return the result
+     */
     public int hashCode() {
         int hash = 7;
         hash = 89 * hash + (this.name != null ? this.name.hashCode() : 0);
@@ -57,6 +66,11 @@ class Field {
     }
 
     @Override
+    /**
+     * <p>Equals.</p>
+     * @param obj
+     * @return the result
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

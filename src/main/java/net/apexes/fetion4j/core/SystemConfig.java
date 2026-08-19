@@ -38,6 +38,7 @@ public final class SystemConfig {
         versionMap.put("services", XmlElementHelper.getNodeAttribute(xml, "/config/services", "version"));
     }
     
+    /** @return return the value. */
     public String getValue(String key) {
         return XmlElementHelper.getNodeContent(xml, key);
     }
@@ -60,6 +61,7 @@ public final class SystemConfig {
         return summary;
     }
     
+    /** @return return the xml. */
     public XmlElement getXml() {
         return xml;
     }
@@ -88,6 +90,10 @@ public final class SystemConfig {
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return xml.toString();
     }

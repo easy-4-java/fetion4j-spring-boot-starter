@@ -20,15 +20,32 @@ import net.apexes.fetion4j.core.util.DigestHelper;
  */
 public class PasswordEncrypterV4 {
 
+    /**
+     * <p>Encrypt v4.</p>
+     * @param userid
+     * @param plainpass
+     * @return the result
+     */
     public static String encryptV4(int userid, String plainpass) {
         String passHex = encryptV4(plainpass);
         return doHash(ConvertHelper.int2Byte(userid), ConvertHelper.hexString2ByteNoSpace(passHex));
     }
 
+    /**
+     * <p>Encrypt v4.</p>
+     * @param plainpass
+     * @return the result
+     */
     public static String encryptV4(String plainpass) {
         return doHash(ConvertHelper.string2Byte("fetion.com.cn:"), ConvertHelper.string2Byte(plainpass));
     }
 
+    /**
+     * <p>Do hash.</p>
+     * @param b1
+     * @param b2
+     * @return the result
+     */
     private static String doHash(byte[] b1, byte[] b2) {
         byte[] dst = new byte[b1.length + b2.length];
         System.arraycopy(b1, 0, dst, 0, b1.length);
@@ -37,6 +54,12 @@ public class PasswordEncrypterV4 {
         return ConvertHelper.byte2HexStringWithoutSpace(res);
     }
 
+    /**
+     * <p>Encrypt v4 temp.</p>
+     * @param userid
+     * @param digest
+     * @return the result
+     */
     public static String encryptV4Temp(int userid, String digest) {
         return doHash(ConvertHelper.int2Byte(userid), ConvertHelper.hexString2ByteNoSpace(digest));
     }

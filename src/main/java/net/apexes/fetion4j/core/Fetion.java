@@ -69,10 +69,21 @@ public class Fetion implements FetionContext {
         }
     }
 
+    /**
+     * <p>Login.</p>
+     * @param password
+     * @return the result
+     */
     public FetionConsole login(String password) throws FetionException {
         return login(password, true);
     }
 
+    /**
+     * <p>Login.</p>
+     * @param password
+     * @param online
+     * @return the result
+     */
     public FetionConsole login(String password, boolean online) throws FetionException {
         Presence presence = online ? Presence.ONLINE : Presence.OFFLINE;
         try {
@@ -100,6 +111,10 @@ public class Fetion implements FetionContext {
         return doLogin();
     }
 
+    /**
+     * <p>Do login.</p>
+     * @return the result
+     */
     private FetionConsole doLogin() throws FetionException {
         controller.start();
         console = new FetionConsoleImpl(controller);
@@ -107,6 +122,9 @@ public class Fetion implements FetionContext {
         return console;
     }
 
+    /**
+     * <p>Close.</p>
+     */
     public void close() throws FetionException {
         if (console != null && !console.isClosed()) {
             console.close();
@@ -114,6 +132,9 @@ public class Fetion implements FetionContext {
         controller.stop();
     }
 
+    /**
+     * <p>Init system config.</p>
+     */
     private void initSystemConfig() throws Exception {
         XmlElement xml = provider.readSystemConfig();
         if (xml != null) {
@@ -149,6 +170,9 @@ public class Fetion implements FetionContext {
         }
     }
     
+    /**
+     * <p>Init mobile validator.</p>
+     */
     private void initMobileValidator() {
         XmlElement xml = systemConfig.getXml().getChild("client-config");
         for (XmlElement el : xml.getChildren("item")) {
@@ -160,6 +184,9 @@ public class Fetion implements FetionContext {
         }
     }
 
+    /**
+     * <p>Init user info.</p>
+     */
     private void initUserInfo() throws IOException {
         userInfo = provider.readUserInfo();
         if (userInfo == null) {
@@ -168,48 +195,63 @@ public class Fetion implements FetionContext {
     }
 
     @Override
+    /** @return return the machine code. */
     public String getMachineCode() {
         return "5DBFE64D4449FBD0AE130C7B12D27A9F";
     }
     
     @Override
+    /** @return return the account. */
     public Account getAccount() {
         return account;
     }
     
     @Override
+    /** @return return the auth supportable. */
     public AuthSupportable getAuthSupportable() {
         return support;
     }
     
+    /** @param support set the auth supportable. */
     public void setAuthSupportable(AuthSupportable support) {
         this.support = support;
     }
     
     @Override
+    /** @return return the log handler. */
     public LogHandler getLogHandler() {
         return logHandler == null ? DEFAULT_LOG_HANDLER : logHandler;
     }
 
+    /** @param logHandler set the log handler. */
     public void setLogHandler(LogHandler logHandler) {
         this.logHandler = logHandler;
     }
 
     @Override
+    /** @return return the system config. */
     public SystemConfig getSystemConfig() {
         return systemConfig;
     }
 
     @Override
+    /** @return return the user info. */
     public UserInfo getUserInfo() {
         return userInfo;
     }
 
     @Override
+    /** @return return the cmcc mobile validator. */
     public CmccMobileValidator getCmccMobileValidator() {
         return mobileValidator;
     }
     
+    /**
+     * <p>Create account.</p>
+     * @param mobileNo
+     * @param password
+     * @return the result
+     */
     private Account createAccount(long mobileNo, String password) throws IOException {
         StringBuilder buf = new StringBuilder();
         buf.append(getSystemConfig().getValue("/config/servers/ssi-app-sign-in-v2"));
@@ -272,10 +314,18 @@ public class Fetion implements FetionContext {
         return null;
     }
     
+    /**
+     * <p>Add notify listener.</p>
+     * @param l
+     */
     public void addNotifyListener(NotifyListener l) {
         controller.addNotifyListener(l);
     }
     
+    /**
+     * <p>Remove notify listener.</p>
+     * @param l
+     */
     public void removeNotifyListener(NotifyListener l) {
         controller.removeNotifyListener(l);
     }
@@ -286,6 +336,10 @@ public class Fetion implements FetionContext {
     private static class DefaultLogHandler implements LogHandler {
 
         @Override
+        /**
+         * <p>Receive.</p>
+         * @param message
+         */
         public void receive(SipcMessage message) {
             System.out.println("<<< ---------------------");
             System.out.println(message);
@@ -293,6 +347,10 @@ public class Fetion implements FetionContext {
         }
 
         @Override
+        /**
+         * <p>Transmit.</p>
+         * @param message
+         */
         public void transmit(SipcMessage message) {
             System.out.println(">>> ---------------------");
             System.out.println(message);
@@ -300,22 +358,43 @@ public class Fetion implements FetionContext {
         }
 
         @Override
+        /**
+         * <p>Error.</p>
+         * @param c
+         * @param msg
+         * @param t
+         */
         public void error(Class<?> c, String msg, Throwable t) {
             System.out.println("[error][" + c + "]" + msg + "\n" + t.getMessage() + "\n");
             t.printStackTrace();
         }
 
         @Override
+        /**
+         * <p>Debug.</p>
+         * @param c
+         * @param msg
+         */
         public void debug(Class<?> c, String msg) {
             System.out.println("[debug][" + c + "]" + msg + "\n");
         }
 
         @Override
+        /**
+         * <p>Info.</p>
+         * @param c
+         * @param msg
+         */
         public void info(Class<?> c, String msg) {
             System.out.println("[info][" + c + "]" + msg + "\n");
         }
 
         @Override
+        /**
+         * <p>Warn.</p>
+         * @param c
+         * @param msg
+         */
         public void warn(Class<?> c, String msg) {
             System.out.println("[warn][" + c + "]" + msg + "\n");
         }

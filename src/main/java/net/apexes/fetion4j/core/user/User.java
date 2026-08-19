@@ -47,31 +47,41 @@ public class User implements java.io.Serializable {
         this.name = name;
     }
     
+    /** @return return the user id. */
     public int getUserId() {
         return userId;
     }
     
+    /** @param userId set the user id. */
     public void setUserId(int userId) {
         this.userId = userId;
     }
     
+    /** @return return the uri. */
     public String getUri() {
         return uri;
     }
     
+    /** @param uri set the uri. */
     public void setUri(String uri) {
         this.uri = uri;
     }
 
+    /** @return return the name. */
     public String getName() {
         return name;
     }
 
+    /** @param name set the name. */
     public void setName(String name) {
         this.name = name;
     }
     
     @Override
+    /**
+     * <p>Hash code.</p>
+     * @return the result
+     */
     public int hashCode() {
         int hash = 5;
         hash = 97 * hash + this.userId;
@@ -79,6 +89,11 @@ public class User implements java.io.Serializable {
     }
 
     @Override
+    /**
+     * <p>Equals.</p>
+     * @param obj
+     * @return the result
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -94,6 +109,10 @@ public class User implements java.io.Serializable {
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "User{" + "userId=" + userId + ", uri=" + uri + ", name=" + name + '}';
     }

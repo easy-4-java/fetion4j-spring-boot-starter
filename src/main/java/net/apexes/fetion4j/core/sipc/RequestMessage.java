@@ -26,11 +26,13 @@ public class RequestMessage extends SipcMessage {
         setMethod(method);
     }
     
+    /** @return return the acceptor. */
     public String getAcceptor() {
         return acceptor;
     }
     
     @Override
+    /** @return return the headline. */
     protected String getHeadline() {
         return getMethod() + " " + getAcceptor() + " " + Sipc.SIPC_VERSION;
     }

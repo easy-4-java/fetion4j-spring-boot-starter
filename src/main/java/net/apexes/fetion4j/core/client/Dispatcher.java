@@ -66,6 +66,10 @@ public class Dispatcher {
         }
     }
 
+    /**
+     * <p>Receive.</p>
+     * @param message
+     */
     private void receive(SipcMessage message) {
         if (message instanceof ResponseMessage) {
             ResponseMessage response = (ResponseMessage) message;
@@ -89,6 +93,9 @@ public class Dispatcher {
      */
     private class ReceiverTask implements Runnable {
 
+        /**
+         * <p>Run.</p>
+         */
         public void run() {
             while (!Thread.interrupted()) {
                 if (!controller.isRunning()) {
@@ -116,6 +123,9 @@ public class Dispatcher {
      */
     private class SenderTask implements Runnable {
 
+        /**
+         * <p>Run.</p>
+         */
         public void run() {
             while (!Thread.interrupted()) {
                 if (!controller.isRunning()) {

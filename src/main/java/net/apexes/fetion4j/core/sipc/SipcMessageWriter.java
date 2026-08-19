@@ -24,10 +24,17 @@ public class SipcMessageWriter {
         this.out = out;
     }
     
+    /**
+     * <p>Close.</p>
+     */
     public void close() throws IOException {
         out.close();
     }
     
+    /**
+     * <p>Write.</p>
+     * @param message
+     */
     public void write(SipcMessage message) throws IOException {
         out.write(message.getText().getBytes());
     }

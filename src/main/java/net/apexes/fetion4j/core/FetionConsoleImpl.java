@@ -28,26 +28,43 @@ public class FetionConsoleImpl implements FetionConsole {
     }
     
     @Override
+    /** @return return the user info. */
     public UserInfo getUserInfo() {
         return controller.getContext().getUserInfo();
     }
 
     @Override
+    /** @return return whether closed is enabled. */
     public boolean isClosed() {
         return closed;
     }
 
     @Override
+    /**
+     * <p>Close.</p>
+     */
     public void close() throws FetionException {
         closed = true;
         controller.stop();
     }
 
+    /**
+     * <p>Add buddy.</p>
+     * @param userId
+     * @param localName
+     * @return the result
+     */
     public Result addBuddy(int userId, String localName) throws FetionException {
         String displayName = controller.getContext().getUserInfo().getPersonal().getDisplayName();
         return controller.createAddBuddyActivity().addBuddy(userId, localName, null, displayName, 0);
     }
 
+    /**
+     * <p>Add buddy.</p>
+     * @param mobileNo
+     * @param localName
+     * @return the result
+     */
     public Result addBuddy(long mobileNo, String localName) throws FetionException {
         FetionContext context = controller.getContext();
         if (! context.getCmccMobileValidator().isCmccMobileNo(mobileNo)) {
@@ -58,16 +75,33 @@ public class FetionConsoleImpl implements FetionConsole {
     }
     
     @Override
+    /**
+     * <p>Remove buddy.</p>
+     * @param buddy
+     * @return the result
+     */
     public Result removeBuddy(Buddy buddy) throws FetionException {
         return controller.createDeleteBuddyActivity().deleteBuddy(buddy, true);
     }
 
     @Override
+    /**
+     * <p>Send message.</p>
+     * @param buddy
+     * @param message
+     * @return the result
+     */
     public Result sendMessage(Buddy buddy, String message) throws FetionException {
         return controller.createChatDialogue(buddy).sendMessage(message);
     }
 
     @Override
+    /**
+     * <p>Send s m s message.</p>
+     * @param buddy
+     * @param message
+     * @return the result
+     */
     public Result sendSMSMessage(Buddy buddy, String message) throws FetionException {
         return controller.createChatDialogue(buddy).sendSMSMessage(message);
     }

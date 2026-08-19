@@ -10,6 +10,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @since 1.0.0
  */
 @ConfigurationProperties(Fetion4jProperties.PREFIX)
+/**
+ * <p>Auto-configuration for Fetion4jProperties.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class Fetion4jProperties {
 
 	/** Configuration prefix used by Spring Boot to bind properties. */

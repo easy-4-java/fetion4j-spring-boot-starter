@@ -50,34 +50,42 @@ public class UserInfo {
         xmlMap = new LinkedHashMap<String, XmlElement>();
     }
 
+    /** @return return the personal. */
     public Personal getPersonal() {
         return personal;
     }
 
+    /** @param personal set the personal. */
     public void setPersonal(Personal personal) {
         this.personal = personal;
     }
 
+    /** @return return the contact. */
     public Contact getContact() {
         return contact;
     }
 
+    /** @param contact set the contact. */
     public void setContact(Contact contact) {
         this.contact = contact;
     }
 
+    /** @return return the quota. */
     public Quota getQuota() {
         return quota;
     }
 
+    /** @param quota set the quota. */
     public void setQuota(Quota quota) {
         this.quota = quota;
     }
 
+    /** @return return the personal version. */
     public String getPersonalVersion() {
         return personal == null ? "0" : personal.getVersion();
     }
 
+    /** @return return the contact version. */
     public String getContactVersion() {
         return contact == null ? "0" : contact.getVersion();
     }
@@ -162,6 +170,11 @@ public class UserInfo {
         }
     }
     
+    /**
+     * <p>Update on sync user info changed.</p>
+     * @param controller
+     * @param xml
+     */
     public void updateOnSyncUserInfoChanged(Controller controller, XmlElement xml) throws Exception {
         // 删除好友:
         //<events><event type="SyncUserInfo"><user-info>
@@ -196,6 +209,10 @@ public class UserInfo {
     }
     
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         StringBuilder buf = new StringBuilder();
         buf.append("UserInfo\r\n");

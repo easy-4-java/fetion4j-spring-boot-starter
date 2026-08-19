@@ -126,6 +126,7 @@ public class Base64 {
         lookUpBase64Alphabet[63] = (byte) '/';
     }
 
+    /** @return return whether base64 is enabled. */
     private static boolean isBase64(byte octect) {
         if (octect == PAD) {
             return true;

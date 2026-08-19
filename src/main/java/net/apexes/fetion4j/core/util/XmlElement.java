@@ -1690,6 +1690,10 @@ public class XmlElement implements java.io.Serializable {
      * @see nanoxml.XmlElement#write(java.io.Writer) write(Writer)
      */
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         try {
             ByteArrayOutputStream out = new ByteArrayOutputStream();

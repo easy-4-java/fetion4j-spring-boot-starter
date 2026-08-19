@@ -57,74 +57,92 @@ public class Personal extends User {
         super(userId, uri, name);
     }
 
+    /** @return return the version. */
     public String getVersion() {
         return version;
     }
 
+    /** @param version set the version. */
     public void setVersion(String version) {
         this.version = version;
     }
     
+    /** @return return the sid. */
     public String getSid() {
         return sid;
     }
 
+    /** @param sid set the sid. */
     public void setSid(String sid) {
         this.sid = sid;
     }
 
+    /** @return return the mobile no. */
     public long getMobileNo() {
         return mobileNo;
     }
 
+    /** @param mobileNo set the mobile no. */
     public void setMobileNo(long mobileNo) {
         this.mobileNo = mobileNo;
     }
 
+    /** @return return the nickname. */
     public String getNickname() {
         return nickname;
     }
 
+    /** @param nickname set the nickname. */
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
+    /** @return return the impresa. */
     public String getImpresa() {
         return impresa;
     }
 
+    /** @param impresa set the impresa. */
     public void setImpresa(String impresa) {
         this.impresa = impresa;
     }
 
+    /** @return return the carrier. */
     public String getCarrier() {
         return carrier;
     }
 
+    /** @param carrier set the carrier. */
     public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
 
+    /** @return return the carrier status. */
     public String getCarrierStatus() {
         return carrierStatus;
     }
 
+    /** @param carrierStatus set the carrier status. */
     public void setCarrierStatus(String carrierStatus) {
         this.carrierStatus = carrierStatus;
     }
 
+    /** @return return the sms online status. */
     public String getSmsOnlineStatus() {
         return smsOnlineStatus;
     }
 
+    /** @param smsOnlineStatus set the sms online status. */
     public void setSmsOnlineStatus(String smsOnlineStatus) {
         this.smsOnlineStatus = smsOnlineStatus;
     }
 
+    /** @return return the presence. */
     public Presence getPresence() {
         return presence;
     }
 
+    /** @param presence set the presence. */
     public void setPresence(Presence presence) {
         this.presence = presence;
     }
@@ -154,6 +172,10 @@ public class Personal extends User {
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Personal{" 
                 + "version=" + version 

@@ -92,6 +92,7 @@ public final class Controller {
         return running;
     }
 
+    /** @return return the context. */
     public FetionContext getContext() {
         return context;
     }
@@ -104,6 +105,9 @@ public final class Controller {
         return transfer;
     }
 
+    /**
+     * <p>Start.</p>
+     */
     public void start() throws FetionException {
         if (!running) {
             running = true;
@@ -130,6 +134,9 @@ public final class Controller {
         }
     }
 
+    /**
+     * <p>Stop.</p>
+     */
     public void stop() throws FetionException {
         if (running) {
             if (mainDialogue != null) {
@@ -172,6 +179,10 @@ public final class Controller {
         return dispatcher.submit(request, timeout);
     }
 
+    /**
+     * <p>Register dialogue.</p>
+     * @param dialogue
+     */
     private void registerDialogue(Dialogue dialogue) {
         dialogueMap.put(dialogue.getCallId(), dialogue);
     }
@@ -216,10 +227,20 @@ public final class Controller {
         return new DeleteBuddyActivity(context, this, currentCallId);
     }
     
+    /**
+     * <p>Add notify listener.</p>
+     * @param l
+     * @return the result
+     */
     public synchronized void addNotifyListener(NotifyListener l) {
         listeners.add(l);
     }
     
+    /**
+     * <p>Remove notify listener.</p>
+     * @param l
+     * @return the result
+     */
     public synchronized void removeNotifyListener(NotifyListener l) {
         listeners.remove(l);
     }

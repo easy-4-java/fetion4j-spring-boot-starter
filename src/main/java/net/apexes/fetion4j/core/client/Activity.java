@@ -47,14 +47,17 @@ public abstract class Activity {
         methodSequenceMap = new HashMap<String, Integer>();
     }
 
+    /** @return return the context. */
     protected FetionContext getContext() {
         return context;
     }
     
+    /** @return return the controller. */
     protected Controller getController() {
         return controller;
     }
 
+    /** @return return the call id. */
     public int getCallId() {
         return callId;
     }
@@ -140,6 +143,12 @@ public abstract class Activity {
         return request;
     }
     
+    /**
+     * <p>Verify.</p>
+     * @param response
+     * @param timeout
+     * @return the result
+     */
     private ResponseMessage verify(ResponseMessage response, long timeout) throws FetionException {
         CaptchaImpl captcha = null;
         int status;

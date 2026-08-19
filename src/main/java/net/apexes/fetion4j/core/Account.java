@@ -60,47 +60,61 @@ public class Account {
 		aesIV  = ConvertHelper.hexString2ByteNoSpace("00399F3D125DB5530AB5E000D6B0F45A");	//固定值
     }
     
+    /** @return return the user id. */
     public int getUserId() {
         return userId;
     }
     
+    /** @return return the mobile no. */
     public long getMobileNo() {
         return mobileNo;
     }
 
+    /** @return return the uri. */
     public String getUri() {
         return uri;
     }
 
+    /** @return return the sid. */
     public String getSid() {
         return sid;
     }
 
+    /** @return return the password. */
     public String getPassword() {
         return password;
     }
 
+    /** @param password set the password. */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /** @return return the presence. */
     public Presence getPresence() {
         return presence;
     }
 
+    /** @param presence set the presence. */
     public void setPresence(Presence presence) {
         this.presence = presence;
     }
 
+    /** @return return the aes key. */
     public byte[] getAesKey() {
         return aesKey;
     }
 
+    /** @return return the aes i v. */
     public byte[] getAesIV() {
         return aesIV;
     }
     
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Account{" + "uri=" + uri 
                 + ", userId=" + userId 

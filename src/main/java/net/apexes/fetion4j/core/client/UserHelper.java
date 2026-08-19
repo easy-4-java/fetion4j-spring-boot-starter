@@ -20,6 +20,11 @@ import net.apexes.fetion4j.core.util.XmlElement;
  */
 public final class UserHelper {
     
+    /**
+     * <p>To user.</p>
+     * @param xml
+     * @return the result
+     */
     public static Object toUser(XmlElement xml) {
         String className = StringHelper.firstToUpperCase(xml.getName());
         className = "net.apexes.fetion4j.core.user." + className;
@@ -51,6 +56,11 @@ public final class UserHelper {
         }
     }
     
+    /**
+     * <p>To xml.</p>
+     * @param user
+     * @return the result
+     */
     public static XmlElement toXml(User user) {
         XmlElement el = new XmlElement();
         Class clazz = user.getClass();

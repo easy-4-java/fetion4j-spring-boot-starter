@@ -27,6 +27,9 @@ public class TransferProxy implements Transfer {
         this.context = context;
     }
 
+    /**
+     * <p>Start transfer.</p>
+     */
     public void startTransfer() throws TransferException {
         TransferException exception = null;
         Transfer transfer = null;
@@ -60,22 +63,35 @@ public class TransferProxy implements Transfer {
         impl = transfer;
     }
 
+    /**
+     * <p>Stop transfer.</p>
+     */
     public void stopTransfer() throws TransferException {
         impl.stopTransfer();
     }
 
+    /**
+     * <p>Read.</p>
+     * @return the result
+     */
     public SipcMessage read() throws IOException, ParseException {
         return impl.read();
     }
 
+    /**
+     * <p>Write.</p>
+     * @param message
+     */
     public void write(SipcMessage message) throws IOException {
         impl.write(message);
     }
 
+    /** @return return whether closed is enabled. */
     public boolean isClosed() {
         return impl.isClosed();
     }
 
+    /** @return return the transfer name. */
     public String getTransferName() {
         return impl.getTransferName();
     }

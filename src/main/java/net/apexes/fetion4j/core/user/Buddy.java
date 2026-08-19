@@ -27,15 +27,21 @@ public class Buddy extends Personal {
         this.relation = relation;
     }
 
+    /** @return return the relation. */
     public Relation getRelation() {
         return relation;
     }
 
+    /** @param relation set the relation. */
     public void setRelation(Relation relation) {
         this.relation = relation;
     }
     
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Buddy{" 
                 + "version=" + getVersion()

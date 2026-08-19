@@ -42,6 +42,10 @@ public class AuthFeedbackImpl implements AuthFeedback {
         latch = new CountDownLatch(1);
     }
     
+    /**
+     * <p>Create captcha impl.</p>
+     * @return the result
+     */
     private CaptchaImpl createCaptchaImpl() throws IOException {
         CaptchaImpl impl;
         if (xml != null) {
@@ -59,23 +63,37 @@ public class AuthFeedbackImpl implements AuthFeedback {
     }
 
     @Override
+    /**
+     * <p>Submit.</p>
+     * @param captchaCode
+     */
     public void submit(String captchaCode) {
         captcha.setCode(captchaCode);
         latch.countDown();
     }
 
     @Override
+    /**
+     * <p>Cancel.</p>
+     */
     public void cancel() {
         captcha = null;
         latch.countDown();
     }
 
     @Override
+    /**
+     * <p>Try again.</p>
+     * @return the result
+     */
     public Captcha tryAgain() throws IOException {
         captcha = createCaptchaImpl();
         return captcha;
     }
     
+    /**
+     * <p>Auth and wait.</p>
+     */
     public void authAndWait() throws IOException {
         if (captcha == null) {
             captcha = createCaptchaImpl();

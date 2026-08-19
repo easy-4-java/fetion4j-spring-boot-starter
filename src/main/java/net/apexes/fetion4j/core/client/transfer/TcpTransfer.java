@@ -36,6 +36,9 @@ public class TcpTransfer implements Transfer {
     }
 
     @Override
+    /**
+     * <p>Start transfer.</p>
+     */
     public void startTransfer() throws TransferException {
         try {
             socket = new Socket();
@@ -50,6 +53,9 @@ public class TcpTransfer implements Transfer {
     }
 
     @Override
+    /**
+     * <p>Stop transfer.</p>
+     */
     public void stopTransfer() throws TransferException {
         try {
             socket.close();
@@ -59,21 +65,31 @@ public class TcpTransfer implements Transfer {
     }
     
     @Override
+    /** @return return whether closed is enabled. */
     public boolean isClosed() {
         return socket.isClosed();
     }
 
     @Override
+    /** @return return the transfer name. */
     public String getTransferName() {
         return "TcpTransfer-" + socket;
     }
 
     @Override
+    /**
+     * <p>Read.</p>
+     * @return the result
+     */
     public SipcMessage read() throws IOException, ParseException {
         return reader.read();
     }
 
     @Override
+    /**
+     * <p>Write.</p>
+     * @param message
+     */
     public void write(SipcMessage message) throws IOException {
         writer.write(message);
     }

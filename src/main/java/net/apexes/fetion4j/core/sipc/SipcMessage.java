@@ -53,26 +53,32 @@ public abstract class SipcMessage {
         fieldList = new ArrayList<Field>();
     }
 
+    /** @return return the method. */
     public String getMethod() {
         return method;
     }
     
+    /** @param method set the method. */
     public void setMethod(String method) {
         this.method = method;
     }
     
+    /** @return return the call id. */
     public int getCallId() {
         return callId;
     }
 
+    /** @param callId set the call id. */
     public void setCallId(int callId) {
         this.callId = callId;
     }
     
+    /** @return return the sequence. */
     public int getSequence() {
         return sequence;
     }
 
+    /** @param sequence set the sequence. */
     public void setSequence(int sequence) {
         this.sequence = sequence;
     }
@@ -108,15 +114,25 @@ public abstract class SipcMessage {
         return getBody().getBytes().length;
     }
     
+    /**
+     * <p>Add field.</p>
+     * @param name
+     * @param value
+     */
     public void addField(String name, String value) {
         fieldList.add(new Field(name, value));
     }
     
+    /** @param value set the field. */
     public void setField(String name, String value) {
         removeAllField(name);
         fieldList.add(new Field(name, value));
     }
     
+    /**
+     * <p>Remove field.</p>
+     * @param fieldName
+     */
     public void removeField(String fieldName) {
         for (int i = fieldList.size() - 1; i >= 0; i--) {
             Field field = fieldList.get(i);
@@ -127,6 +143,10 @@ public abstract class SipcMessage {
         }
     }
     
+    /**
+     * <p>Remove all field.</p>
+     * @param fieldName
+     */
     public void removeAllField(String fieldName) {
         for (int i = fieldList.size() - 1; i >= 0; i--) {
             Field field = fieldList.get(i);
@@ -152,6 +172,7 @@ public abstract class SipcMessage {
         return b;
     }
     
+    /** @return return the field. */
     private Field getField(String fieldName) {
         for (Field field : fieldList) {
             if (field.getName().equals(fieldName)) {
@@ -161,6 +182,7 @@ public abstract class SipcMessage {
         return null;
     }
     
+    /** @return return the field value. */
     public String getFieldValue(String fieldName) {
         String value = null;
         Field field = getField(fieldName);
@@ -170,6 +192,7 @@ public abstract class SipcMessage {
         return value;
     }
     
+    /** @return return the field values. */
     public List<String> getFieldValues(String fieldName) {
         ArrayList<String> list = new ArrayList<String>();
         for (Field field : fieldList) {
@@ -180,14 +203,17 @@ public abstract class SipcMessage {
         return list;
     }
 
+    /** @return return the body. */
     public String getBody() {
         return body;
     }
 
+    /** @param body set the body. */
     public void setBody(String body) {
         this.body = body;
     }
     
+    /** @return return the text. */
     public String getText() {
         StringBuilder buf = new StringBuilder(getHeadline());
         buf.append(SipcMessage.SEPARATOR);
@@ -228,6 +254,10 @@ public abstract class SipcMessage {
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return getText();
     }

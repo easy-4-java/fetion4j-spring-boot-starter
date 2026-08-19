@@ -52,23 +52,31 @@ public class Result {
         this.describe = describe;
     }
 
+    /** @return return the status. */
     public int getStatus() {
         return status;
     }
 
+    /** @return return the status message. */
     public String getStatusMessage() {
         return statusMessage;
     }
 
+    /** @return return the type. */
     public Type getType() {
         return type;
     }
 
+    /** @return return the describe. */
     public String getDescribe() {
         return describe;
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Result{" 
                 + "status=" + status 

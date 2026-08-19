@@ -49,53 +49,67 @@ public class CaptchaImpl implements Captcha {
     }
 
     @Override
+    /** @return return the image data. */
     public byte[] getImageData() {
         return imageData;
     }
 
     @Override
+    /** @return return the image id. */
     public String getImageId() {
         return imageId;
     }
 
     @Override
+    /** @return return the text. */
     public String getText() {
         return text;
     }
 
     @Override
+    /** @return return the tips. */
     public String getTips() {
         return tips;
     }
 
     @Override
+    /** @return return the verify algorithm. */
     public String getVerifyAlgorithm() {
         return verifyAlgorithm;
     }
 
     @Override
+    /** @return return the verify type. */
     public String getVerifyType() {
         return verifyTye;
     }
 
+    /** @return return the code. */
     public String getCode() {
         return code;
     }
 
+    /** @param code set the code. */
     public void setCode(String code) {
         this.code = code;
     }
 
     @Override
+    /** @return return the fail count. */
     public int getFailCount() {
         return failCount;
     }
 
+    /** @param failCount set the fail count. */
     public void setFailCount(int failCount) {
         this.failCount = failCount;
     }
 
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Captcha{" + "verifyAlgorithm=" + verifyAlgorithm
                 + ", verifyTye=" + verifyTye

@@ -23,22 +23,27 @@ public class Quota {
     private int sendSmsMonthLimit;
     private int sendSmsMonthCount;
 
+    /** @return return the max buddies. */
     public int getMaxBuddies() {
         return maxBuddies;
     }
 
+    /** @return return the send sms day limit. */
     public int getSendSmsDayLimit() {
         return sendSmsDayLimit;
     }
 
+    /** @return return the send sms day count. */
     public int getSendSmsDayCount() {
         return sendSmsDayCount;
     }
 
+    /** @return return the send sms month limit. */
     public int getSendSmsMonthLimit() {
         return sendSmsMonthLimit;
     }
 
+    /** @return return the send sms month count. */
     public int getSendSmsMonthCount() {
         return sendSmsMonthCount;
     }
@@ -85,6 +90,10 @@ public class Quota {
     }
     
     @Override
+    /**
+     * <p>To string.</p>
+     * @return the result
+     */
     public String toString() {
         return "Quota{" + "maxBuddies=" + maxBuddies
                 + ", sendSmsDayLimit=" + sendSmsDayLimit

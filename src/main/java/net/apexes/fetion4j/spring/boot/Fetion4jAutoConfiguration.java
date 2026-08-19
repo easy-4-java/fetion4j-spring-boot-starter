@@ -27,6 +27,11 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 @Configuration
 @ConditionalOnProperty(prefix = Fetion4jProperties.PREFIX, value = "enabled", havingValue = "true")
 @EnableConfigurationProperties({ Fetion4jProperties.class })
+/**
+ * <p>Auto-configuration for Fetion4jAutoConfiguration.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class Fetion4jAutoConfiguration {
 
 	// Spring resource pattern resolver.

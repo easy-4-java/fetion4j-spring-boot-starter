@@ -43,6 +43,7 @@ public class CmccMobileValidator {
         }
     }
     
+    /** @return return whether cmcc mobile no is enabled. */
     public boolean isCmccMobileNo(long mobileNo) {
         boolean b = false;
         for (Part part : partList) {

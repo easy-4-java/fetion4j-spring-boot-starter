@@ -40,23 +40,28 @@ public class ResponseMessage extends SipcMessage {
         this.statusMessage = statusMessage; 
     }
     
+    /** @return return the status. */
     public int getStatus() {
         return status;
     }
 
+    /** @return return the status message. */
     public String getStatusMessage() {
         return statusMessage;
     }
 
+    /** @return return the request message. */
     public RequestMessage getRequestMessage() {
         return requestMessage;
     }
 
+    /** @param requestMessage set the request message. */
     public void setRequestMessage(RequestMessage requestMessage) {
         this.requestMessage = requestMessage;
     }
     
     @Override
+    /** @return return the headline. */
     protected String getHeadline() {
         return Sipc.SIPC_VERSION + " " + getStatus() + " " + getStatusMessage();
     }

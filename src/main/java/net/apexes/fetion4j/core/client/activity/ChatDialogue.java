@@ -35,13 +35,23 @@ public class ChatDialogue extends Dialogue {
     }
 
     @Override
+    /**
+     * <p>Receive.</p>
+     * @param message
+     */
     public void receive(SipcMessage message) {
     }
 
+    /** @return return the buddy. */
     public Buddy getBuddy() {
         return buddy;
     }
 
+    /**
+     * <p>Send message.</p>
+     * @param msg
+     * @return the result
+     */
     public Result sendMessage(String msg) throws FetionException {
         if (ClientHelper.isMobileUri(buddy.getUri())) {
             return sendSMSMessage(msg);
@@ -49,10 +59,20 @@ public class ChatDialogue extends Dialogue {
         return sendChatMessage(msg);
     }
 
+    /**
+     * <p>Send s m s message.</p>
+     * @param msg
+     * @return the result
+     */
     public Result sendSMSMessage(String msg) throws FetionException {
         return submitRequest(MessageHelper.createMsgRequest(buddy, msg, true));
     }
 
+    /**
+     * <p>Send chat message.</p>
+     * @param msg
+     * @return the result
+     */
     public Result sendChatMessage(String msg) throws FetionException {
         return submitRequest(MessageHelper.createMsgRequest(buddy, msg, false));
     }
@@ -85,6 +105,10 @@ public class ChatDialogue extends Dialogue {
         }
     }
     
+    /**
+     * <p>Update quota frequency.</p>
+     * @param body
+     */
     private void updateQuotaFrequency(String body) {
         //<results><quota-frequency>
         //<frequency name="send-sms" day-count="5" month-count="17"/>
