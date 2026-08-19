@@ -705,4 +705,85 @@ class XmlElementTest {
         // the (name, Hashtable, String, boolean) variant is private-ish; just call the public one
         assertThat(el.getIntAttribute("n", 0)).isEqualTo(5);
     }
+
+    @Test
+    @DisplayName("parseString throws when an attribute has no '=' assignment")
+    void testParseAttributeMissingEqualsThrows() {
+        XmlElement el = new XmlElement();
+        assertThatThrownBy(() -> el.parseString("<user id \"7\"/>"))
+                .isInstanceOf(XmlParseException.class);
+    }
+
+    @Test
+    @DisplayName("parseString throws on a malformed numeric character reference")
+    void testParseMalformedNumericEntityThrows() {
+        XmlElement el = new XmlElement();
+        assertThatThrownBy(() -> el.parseString("<msg>&#zz;</msg>"))
+                .isInstanceOf(XmlParseException.class);
+    }
+
+    @Test
+    @DisplayName("parseString keeps bracket and '>' sequences inside CDATA sections")
+    void testCDataBracketAndGtSequences() throws Exception {
+        XmlElement el = new XmlElement();
+        el.parseString("<msg><![CDATA[a ]]] b ]> c]]></msg>");
+        assertThat(el.getContent()).isEqualTo("a ]] b ]> c");
+    }
+
+    @Test
+    @DisplayName("parseString accepts a comment between self-closing children")
+    void testCommentBetweenSelfClosingChildren() throws Exception {
+        XmlElement el = new XmlElement();
+        el.parseString("<r><a/><!-- c --><b>2</b></r>");
+        assertThat(el.getChildrenCount()).isEqualTo(2);
+        assertThat(el.getChild("b").getContent()).isEqualTo("2");
+    }
+
+    @Test
+    @DisplayName("parseString throws on trailing text after a self-closing child")
+    void testTextAfterSelfClosingChildThrows() {
+        XmlElement el = new XmlElement();
+        assertThatThrownBy(() -> el.parseString("<r><a/>text</r>"))
+                .isInstanceOf(XmlParseException.class);
+    }
+
+    @Test
+    @DisplayName("parseString throws when a comment is not terminated by '>'")
+    void testCommentMissingClosingGtThrows() {
+        XmlElement el = new XmlElement();
+        assertThatThrownBy(() -> el.parseString("<r><!-- a --! --></r>"))
+                .isInstanceOf(XmlParseException.class);
+    }
+
+    @Test
+    @DisplayName("parseString throws when a self-closing tag is not closed by '>'")
+    void testSelfClosingTagMissingGtThrows() {
+        XmlElement el = new XmlElement();
+        assertThatThrownBy(() -> el.parseString("<r a=\"1\"/x>"))
+                .isInstanceOf(XmlParseException.class);
+    }
+
+    @Test
+    @DisplayName("Exception factories produce descriptive XmlParseExceptions")
+    void testParseExceptionFactories() {
+        ExposedXmlElement el = new ExposedXmlElement();
+        assertThat(el.syntaxErrorExposed("element")).isInstanceOf(XmlParseException.class)
+                .hasMessageContaining("Syntax error while parsing element");
+        assertThat(el.invalidValueSetExposed("amp")).isInstanceOf(XmlParseException.class)
+                .hasMessageContaining("Invalid value set");
+    }
+
+    /**
+     * Exposes the protected exception factories so they can be unit tested.
+     */
+    static class ExposedXmlElement extends XmlElement {
+
+        XmlParseException syntaxErrorExposed(String context) {
+            return syntaxError(context);
+        }
+
+        XmlParseException invalidValueSetExposed(String name) {
+            return invalidValueSet(name);
+        }
+    }
 }
