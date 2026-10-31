@@ -146,7 +146,7 @@ public class XmlElementHelper {
      * @return the result
      */
     public static void main(String[] args) throws Exception {
-        XmlElement xml = open("systemconfig.xml", "UTF-8");
+        XmlElement xml = open(new File("systemconfig.xml"), "UTF-8");
         System.out.println(getNodeContent(xml, "/config/servers/get-pic-code"));
         System.out.println(getNodeContent(xml, "/config/servers/ssi-app-sign-in-v2"));
         System.out.println(getNodeAttribute(xml, "/config/servers", "version"));
