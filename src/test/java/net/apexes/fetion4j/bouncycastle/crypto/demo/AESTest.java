@@ -19,7 +19,6 @@ import net.apexes.fetion4j.bouncycastle.crypto.paddings.PaddedBufferedBlockCiphe
 import net.apexes.fetion4j.bouncycastle.crypto.params.KeyParameter;
 import net.apexes.fetion4j.bouncycastle.crypto.params.ParametersWithIV;
 //import org.bouncycastle.util.encoders.Hex;
-import sun.misc.BASE64Decoder;
 
 /**
  *
@@ -38,7 +37,7 @@ public class AESTest {
         bouncycastle();
 
         /*
-        byte[] encryptedContent = new BASE64Decoder().decodeBuffer(target);
+        byte[] encryptedContent = java.util.Base64.getDecoder().decode(target);
         byte[] keyBytes = hexString2ByteNoSpace(key);
         byte[] ivBytes = hexString2ByteNoSpace(IV);
         byte[] decryptedContent = bouncycastleDecrypt(encryptedContent, keyBytes, ivBytes);
@@ -56,7 +55,7 @@ public class AESTest {
 
     private static void jec() throws Exception {
         //*
-        byte[] targetBytes = new BASE64Decoder().decodeBuffer(target);
+        byte[] targetBytes = java.util.Base64.getDecoder().decode(target);
         byte[] keyBytes = hexString2ByteNoSpace(key);
         byte[] ivBytes = hexString2ByteNoSpace(IV);
 
@@ -102,7 +101,7 @@ public class AESTest {
             System.out.print("Encrypted Content:");
             System.out.println(byte2HexStringWithoutSpace(encryptedContent));
 
-            //encryptedContent = new BASE64Decoder().decodeBuffer(target);
+            //encryptedContent = java.util.Base64.getDecoder().decode(target);
 
             engine.init(false, new ParametersWithIV(new KeyParameter(keyBytes), ivBytes));
             byte[] dec = new byte[engine.getOutputSize(encryptedContent.length)];
